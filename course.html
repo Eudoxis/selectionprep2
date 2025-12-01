@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course content and lessons">
+    <title>Course Content - Learning Platform</title>
+    <link rel="stylesheet" href="course-styles.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="index.html" class="logo">YourCourse</a>
+            <span class="course-title">Lorem Ipsum Dolor Sit</span>
+        </div>
+        <div class="nav-right">
+            <div class="progress-indicator">
+                <span class="progress-text">Progress: <strong>35%</strong></span>
+                <div class="progress-bar-small">
+                    <div class="progress-fill" style="width: 35%"></div>
+                </div>
+            </div>
+            <button class="btn-icon" title="Notifications">
+                <span class="notification-badge">3</span>
+                🔔
+            </button>
+            <div class="user-menu">
+                <div class="user-avatar">JD</div>
+                <span class="user-name">John Doe</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="course-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Course Content</h3>
+                <button class="collapse-all" id="collapseAll">Collapse All</button>
+            </div>
+
+            <div class="search-lessons">
+                <input type="text" placeholder="Search lessons..." id="searchLessons">
+            </div>
+
+            <div class="modules-container">
+                <!-- Module 1 -->
+                <div class="module-item active">
+                    <div class="module-header">
+                        <div class="module-title-wrapper">
+                            <span class="expand-icon">▼</span>
+                            <h4>Module 1: Lorem Ipsum Fundamentals</h4>
+                        </div>
+                        <span class="module-progress">3/8</span>
+                    </div>
+                    <div class="lessons-list">
+                        <div class="lesson-item completed">
+                            <span class="lesson-icon">✓</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">1.1 Introduction to Lorem</span>
+                                <span class="lesson-duration">12:45</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item completed">
+                            <span class="lesson-icon">✓</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">1.2 Dolor Sit Amet Basics</span>
+                                <span class="lesson-duration">18:30</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item active">
+                            <span class="lesson-icon">▶</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">1.3 Consectetur Adipiscing</span>
+                                <span class="lesson-duration">22:15</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">1.4 Elit Sed Do</span>
+                                <span class="lesson-duration">15:20</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">1.5 Eiusmod Tempor</span>
+                                <span class="lesson-duration">20:00</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item quiz">
+                            <span class="lesson-icon">📝</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">Quiz: Module 1 Assessment</span>
+                                <span class="lesson-duration">10 questions</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">1.6 Incididunt Ut Labore</span>
+                                <span class="lesson-duration">25:10</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item assignment">
+                            <span class="lesson-icon">📄</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">Assignment: Dolore Magna Project</span>
+                                <span class="lesson-duration">Due in 5 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="module-item">
+                    <div class="module-header">
+                        <div class="module-title-wrapper">
+                            <span class="expand-icon">▶</span>
+                            <h4>Module 2: Advanced Aliqua Techniques</h4>
+                        </div>
+                        <span class="module-progress">0/6</span>
+                    </div>
+                    <div class="lessons-list" style="display: none;">
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">2.1 Ut Enim Ad Minim</span>
+                                <span class="lesson-duration">16:40</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">2.2 Veniam Quis Nostrud</span>
+                                <span class="lesson-duration">19:25</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">2.3 Exercitation Ullamco</span>
+                                <span class="lesson-duration">23:50</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">2.4 Laboris Nisi Ut</span>
+                                <span class="lesson-duration">21:15</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item quiz">
+                            <span class="lesson-icon">📝</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">Quiz: Module 2 Assessment</span>
+                                <span class="lesson-duration">15 questions</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">2.5 Aliquip Ex Ea Commodo</span>
+                                <span class="lesson-duration">28:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="module-item">
+                    <div class="module-header">
+                        <div class="module-title-wrapper">
+                            <span class="expand-icon">▶</span>
+                            <h4>Module 3: Consequat Duis Mastery</h4>
+                        </div>
+                        <span class="module-progress">0/7</span>
+                    </div>
+                    <div class="lessons-list" style="display: none;">
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">3.1 Aute Irure Dolor</span>
+                                <span class="lesson-duration">14:55</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">3.2 Reprehenderit in Voluptate</span>
+                                <span class="lesson-duration">20:40</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">3.3 Velit Esse Cillum</span>
+                                <span class="lesson-duration">18:20</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">3.4 Dolore Eu Fugiat</span>
+                                <span class="lesson-duration">26:10</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">3.5 Nulla Pariatur</span>
+                                <span class="lesson-duration">22:35</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item quiz">
+                            <span class="lesson-icon">📝</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">Quiz: Module 3 Assessment</span>
+                                <span class="lesson-duration">20 questions</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item assignment">
+                            <span class="lesson-icon">📄</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">Final Project: Excepteur Sint</span>
+                                <span class="lesson-duration">Due in 14 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="module-item">
+                    <div class="module-header">
+                        <div class="module-title-wrapper">
+                            <span class="expand-icon">▶</span>
+                            <h4>Module 4: Occaecat Cupidatat Certification</h4>
+                        </div>
+                        <span class="module-progress">0/5</span>
+                    </div>
+                    <div class="lessons-list" style="display: none;">
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">4.1 Proident Sunt in Culpa</span>
+                                <span class="lesson-duration">17:50</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">4.2 Qui Officia Deserunt</span>
+                                <span class="lesson-duration">24:15</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🔒</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">4.3 Mollit Anim Id</span>
+                                <span class="lesson-duration">19:30</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item quiz">
+                            <span class="lesson-icon">📝</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">Final Exam: Comprehensive Assessment</span>
+                                <span class="lesson-duration">50 questions</span>
+                            </div>
+                        </div>
+                        <div class="lesson-item">
+                            <span class="lesson-icon">🎓</span>
+                            <div class="lesson-info">
+                                <span class="lesson-title">Certificate of Completion</span>
+                                <span class="lesson-duration">Download</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="btn-secondary full-width">View All Resources</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Video Player Section -->
+            <div class="video-container">
+                <div class="video-player">
+                    <div class="video-placeholder">
+                        <div class="play-button">▶</div>
+                        <p>Video Player</p>
+                    </div>
+                </div>
+                <div class="video-controls">
+                    <button class="control-btn" title="Play/Pause">▶</button>
+                    <div class="progress-bar">
+                        <div class="progress-filled" style="width: 45%"></div>
+                    </div>
+                    <span class="time-display">10:15 / 22:15</span>
+                    <div class="video-options">
+                        <button class="control-btn" title="Speed">1x</button>
+                        <button class="control-btn" title="Quality">720p</button>
+                        <button class="control-btn" title="Captions">CC</button>
+                        <button class="control-btn" title="Fullscreen">⛶</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson Content Tabs -->
+            <div class="content-tabs">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="transcript">Transcript</button>
+                <button class="tab-btn" data-tab="notes">Notes</button>
+                <button class="tab-btn" data-tab="resources">Resources</button>
+                <button class="tab-btn" data-tab="discussion">Discussion</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content active" id="overview">
+                <div class="lesson-header">
+                    <h1>1.3 Consectetur Adipiscing</h1>
+                    <div class="lesson-meta">
+                        <span class="meta-item">📅 Updated 2 days ago</span>
+                        <span class="meta-item">⏱ Duration: 22:15</span>
+                        <span class="meta-item">👁 3,456 views</span>
+                    </div>
+                </div>
+
+                <div class="lesson-content">
+                    <h2>Lesson Overview</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <h3>What You'll Learn</h3>
+                    <ul class="learning-objectives">
+                        <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</li>
+                        <li>Dolore eu fugiat nulla pariatur excepteur sint occaecat</li>
+                        <li>Cupidatat non proident sunt in culpa qui officia deserunt mollit</li>
+                        <li>Anim id est laborum sed ut perspiciatis unde omnis iste natus</li>
+                    </ul>
+
+                    <h3>Key Concepts</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+                    <div class="info-box">
+                        <h4>💡 Important Note</h4>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+
+                    <h3>Detailed Explanation</h3>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+
+                    <h3>Practical Application</h3>
+                    <p>Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+
+                    <div class="code-example">
+                        <div class="code-header">
+                            <span>Example Code</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>// Lorem ipsum code example
+function consecteturAdipiscing() {
+    const dolor = "sit amet";
+    return dolor.split(' ').map(word => {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ');
+}
+
+// Consectetur adipiscing elit
+const result = consecteturAdipiscing();
+console.log(result);</code></pre>
+                    </div>
+
+                    <h3>Summary</h3>
+                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+
+                    <div class="next-steps">
+                        <h4>📚 Next Steps</h4>
+                        <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="transcript">
+                <div class="transcript-content">
+                    <h2>Video Transcript</h2>
+                    <div class="transcript-item">
+                        <span class="timestamp">00:00</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="transcript-item">
+                        <span class="timestamp">00:45</span>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                    </div>
+                    <div class="transcript-item">
+                        <span class="timestamp">01:30</span>
+                        <p>In voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    </div>
+                    <div class="transcript-item">
+                        <span class="timestamp">02:15</span>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    </div>
+                    <div class="transcript-item">
+                        <span class="timestamp">03:00</span>
+                        <p>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="notes">
+                <div class="notes-section">
+                    <h2>My Notes</h2>
+                    <div class="note-editor">
+                        <textarea placeholder="Take notes here..." rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. These are my notes from the lesson.
+
+Key points:
+- Sed do eiusmod tempor incididunt
+- Ut labore et dolore magna aliqua
+- Quis nostrud exercitation ullamco
+
+Questions to follow up on:
+- How does this apply to real-world scenarios?
+- What are the best practices?</textarea>
+                        <div class="note-actions">
+                            <button class="btn-primary">Save Notes</button>
+                            <button class="btn-secondary">Export</button>
+                        </div>
+                    </div>
+
+                    <div class="saved-notes">
+                        <h3>Previous Notes</h3>
+                        <div class="note-card">
+                            <div class="note-header">
+                                <strong>Lesson 1.2 Notes</strong>
+                                <span class="note-date">2 days ago</span>
+                            </div>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                        </div>
+                        <div class="note-card">
+                            <div class="note-header">
+                                <strong>Lesson 1.1 Notes</strong>
+                                <span class="note-date">5 days ago</span>
+                            </div>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="resources">
+                <div class="resources-section">
+                    <h2>Lesson Resources</h2>
+
+                    <div class="resource-category">
+                        <h3>📄 Documents</h3>
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <span class="resource-icon">📋</span>
+                                <div class="resource-info">
+                                    <strong>Lorem Ipsum Guide.pdf</strong>
+                                    <span>2.4 MB • PDF Document</span>
+                                </div>
+                                <button class="btn-download">Download</button>
+                            </div>
+                            <div class="resource-item">
+                                <span class="resource-icon">📊</span>
+                                <div class="resource-info">
+                                    <strong>Dolor Sit Amet Slides.pptx</strong>
+                                    <span>5.1 MB • PowerPoint</span>
+                                </div>
+                                <button class="btn-download">Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-category">
+                        <h3>💻 Code Files</h3>
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <span class="resource-icon">📦</span>
+                                <div class="resource-info">
+                                    <strong>consectetur-project.zip</strong>
+                                    <span>845 KB • ZIP Archive</span>
+                                </div>
+                                <button class="btn-download">Download</button>
+                            </div>
+                            <div class="resource-item">
+                                <span class="resource-icon">📝</span>
+                                <div class="resource-info">
+                                    <strong>adipiscing-examples.js</strong>
+                                    <span>12 KB • JavaScript</span>
+                                </div>
+                                <button class="btn-download">Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-category">
+                        <h3>🔗 External Links</h3>
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <span class="resource-icon">🌐</span>
+                                <div class="resource-info">
+                                    <strong>Lorem Ipsum Official Documentation</strong>
+                                    <span>lorem-ipsum.com</span>
+                                </div>
+                                <button class="btn-link">Visit</button>
+                            </div>
+                            <div class="resource-item">
+                                <span class="resource-icon">🌐</span>
+                                <div class="resource-info">
+                                    <strong>Dolor Sit Community Forum</strong>
+                                    <span>forum.dolorsit.org</span>
+                                </div>
+                                <button class="btn-link">Visit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="discussion">
+                <div class="discussion-section">
+                    <h2>Discussion</h2>
+
+                    <div class="new-comment">
+                        <div class="comment-avatar">JD</div>
+                        <textarea placeholder="Ask a question or share your thoughts..."></textarea>
+                        <button class="btn-primary">Post Comment</button>
+                    </div>
+
+                    <div class="comments-list">
+                        <div class="comment-item">
+                            <div class="comment-avatar">AS</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <strong>Alice Smith</strong>
+                                    <span class="comment-time">3 hours ago</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This lesson really helped me understand the concepts better! Has anyone tried implementing this in a real project?</p>
+                                <div class="comment-actions">
+                                    <button class="comment-btn">👍 12</button>
+                                    <button class="comment-btn">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-item reply">
+                            <div class="comment-avatar">BJ</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <strong>Bob Johnson</strong>
+                                    <span class="comment-time">2 hours ago</span>
+                                </div>
+                                <p>Sed do eiusmod tempor incididunt ut labore. Yes! I used it in my last project and it worked perfectly. Let me know if you need any help!</p>
+                                <div class="comment-actions">
+                                    <button class="comment-btn">👍 8</button>
+                                    <button class="comment-btn">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-item">
+                            <div class="comment-avatar">CD</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <strong>Carol Davis</strong>
+                                    <span class="comment-time">1 day ago</span>
+                                </div>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation. Great explanation! Could you provide more examples on how to handle edge cases?</p>
+                                <div class="comment-actions">
+                                    <button class="comment-btn">👍 15</button>
+                                    <button class="comment-btn">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson Navigation -->
+            <div class="lesson-navigation">
+                <button class="nav-btn prev">
+                    <span>←</span>
+                    <div>
+                        <small>Previous</small>
+                        <strong>1.2 Dolor Sit Amet Basics</strong>
+                    </div>
+                </button>
+                <button class="btn-complete">Mark as Complete</button>
+                <button class="nav-btn next">
+                    <div>
+                        <small>Next</small>
+                        <strong>1.4 Elit Sed Do</strong>
+                    </div>
+                    <span>→</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="course-script.js"></script>
+</body>
+</html>
