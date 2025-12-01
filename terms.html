@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - YourCourse</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+    <style>
+        .legal-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .legal-content {
+            padding: 3rem;
+        }
+
+        .legal-content h1 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .legal-content h2 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin: 2rem 0 1rem;
+        }
+
+        .legal-content h3 {
+            font-size: 1.4rem;
+            color: #374151;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .legal-content p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ul, .legal-content ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            color: #4b5563;
+            line-height: 1.8;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid #6366f1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6366f1;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .legal-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">YourCourse</a>
+        </div>
+    </nav>
+
+    <div class="legal-container">
+        <div class="legal-content">
+            <a href="index.html" class="back-link">← Back to Home</a>
+
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last Updated: <span id="update-date"></span></p>
+
+            <p>Welcome to YourCourse. By accessing and using our website and services, you agree to be bound by these Terms of Service. Please read them carefully.</p>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using our course platform, you agree to comply with and be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
+
+            <h2>2. Course Access and Enrollment</h2>
+
+            <h3>2.1 Account Registration</h3>
+            <p>To access our courses, you must:</p>
+            <ul>
+                <li>Be at least 18 years of age or have parental/guardian consent</li>
+                <li>Provide accurate, current, and complete information during registration</li>
+                <li>Maintain the security of your account credentials</li>
+                <li>Accept full responsibility for all activities under your account</li>
+            </ul>
+
+            <h3>2.2 Course Enrollment</h3>
+            <p>Upon successful purchase and payment:</p>
+            <ul>
+                <li>You will receive immediate access to the course materials</li>
+                <li>Access is granted for the lifetime of the course, unless otherwise specified</li>
+                <li>Access is personal and non-transferable</li>
+                <li>You may not share your account credentials with others</li>
+            </ul>
+
+            <h2>3. Payment and Refund Policy</h2>
+
+            <h3>3.1 Payment Terms</h3>
+            <p>All payments are processed securely through Stripe. By providing payment information, you:</p>
+            <ul>
+                <li>Authorize us to charge your payment method for the selected plan</li>
+                <li>Confirm that the payment information provided is accurate and current</li>
+                <li>Agree to pay all applicable fees and taxes</li>
+            </ul>
+
+            <h3>3.2 Money-Back Guarantee</h3>
+            <div class="highlight-box">
+                <p><strong>30-Day Money-Back Guarantee:</strong> If you're not satisfied with your purchase for any reason, you may request a full refund within 30 days of your purchase date. No questions asked.</p>
+            </div>
+
+            <p>To request a refund:</p>
+            <ol>
+                <li>Contact our support team at <span id="support-email"></span></li>
+                <li>Provide your order number and email address</li>
+                <li>Refunds are processed within 5-10 business days</li>
+            </ol>
+
+            <h2>4. Intellectual Property Rights</h2>
+
+            <h3>4.1 Course Content</h3>
+            <p>All course materials, including but not limited to:</p>
+            <ul>
+                <li>Video lectures</li>
+                <li>Written content and documentation</li>
+                <li>Code examples and projects</li>
+                <li>Quizzes and assessments</li>
+                <li>Downloadable resources</li>
+            </ul>
+            <p>are the intellectual property of YourCourse and protected by copyright laws.</p>
+
+            <h3>4.2 Usage Restrictions</h3>
+            <p>You may NOT:</p>
+            <ul>
+                <li>Copy, reproduce, or distribute course content</li>
+                <li>Share login credentials with others</li>
+                <li>Record or screenshot course videos</li>
+                <li>Resell or redistribute course materials</li>
+                <li>Use content for commercial purposes without permission</li>
+            </ul>
+
+            <h2>5. User Conduct</h2>
+            <p>You agree to use the platform responsibly and not to:</p>
+            <ul>
+                <li>Violate any applicable laws or regulations</li>
+                <li>Harass, abuse, or harm other users</li>
+                <li>Post inappropriate or offensive content</li>
+                <li>Attempt to gain unauthorized access to the platform</li>
+                <li>Interfere with the proper functioning of the platform</li>
+                <li>Use automated tools to access the platform</li>
+            </ul>
+
+            <h2>6. Community Guidelines</h2>
+            <p>Our discussion forums and community spaces are meant to foster learning and collaboration. We expect all users to:</p>
+            <ul>
+                <li>Be respectful and professional</li>
+                <li>Help and support fellow students</li>
+                <li>Stay on topic and relevant to the course</li>
+                <li>Report inappropriate behavior</li>
+            </ul>
+
+            <h2>7. Certificates</h2>
+            <p>Upon successful completion of the course:</p>
+            <ul>
+                <li>You will receive a certificate of completion</li>
+                <li>Certificates are digital and downloadable</li>
+                <li>Certificates may be shared on LinkedIn and other platforms</li>
+                <li>We reserve the right to revoke certificates if terms are violated</li>
+            </ul>
+
+            <h2>8. Platform Availability</h2>
+            <p>We strive to provide uninterrupted access to our platform. However:</p>
+            <ul>
+                <li>Occasional downtime for maintenance may occur</li>
+                <li>We are not liable for temporary service interruptions</li>
+                <li>We may update or modify course content at any time</li>
+                <li>We reserve the right to discontinue features with notice</li>
+            </ul>
+
+            <h2>9. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law:</p>
+            <ul>
+                <li>We provide the course "as is" without warranties</li>
+                <li>We are not liable for any indirect or consequential damages</li>
+                <li>Our total liability is limited to the amount you paid for the course</li>
+                <li>We do not guarantee specific results or outcomes</li>
+            </ul>
+
+            <h2>10. Privacy and Data Protection</h2>
+            <p>Your privacy is important to us. Please review our <a href="privacy.html" style="color: #6366f1;">Privacy Policy</a> to understand how we collect, use, and protect your personal information.</p>
+
+            <h2>11. Termination</h2>
+            <p>We reserve the right to:</p>
+            <ul>
+                <li>Suspend or terminate your account for violation of these terms</li>
+                <li>Remove content that violates our policies</li>
+                <li>Refuse service to anyone at any time</li>
+            </ul>
+
+            <h2>12. Changes to Terms</h2>
+            <p>We may update these Terms of Service from time to time. Changes will be:</p>
+            <ul>
+                <li>Posted on this page with an updated "Last Updated" date</li>
+                <li>Communicated via email for material changes</li>
+                <li>Effective immediately upon posting</li>
+            </ul>
+            <p>Continued use of the platform after changes constitutes acceptance of the new terms.</p>
+
+            <h2>13. Governing Law</h2>
+            <p>These Terms of Service are governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.</p>
+
+            <h2>14. Contact Information</h2>
+            <p>If you have any questions about these Terms of Service, please contact us:</p>
+            <ul>
+                <li>Email: <span id="contact-email"></span></li>
+                <li>Website: <span id="website-url"></span></li>
+            </ul>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <p><strong>Important:</strong> This is a template. Please consult with a legal professional to ensure these terms comply with your local laws and adequately protect your business.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p id="copyright"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Populate from config
+        document.getElementById('update-date').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        document.getElementById('support-email').textContent = CONFIG.site.email;
+        document.getElementById('contact-email').textContent = CONFIG.site.email;
+        document.getElementById('website-url').textContent = CONFIG.site.url;
+        document.getElementById('copyright').textContent = `© ${CONFIG.site.year} ${CONFIG.site.name}. All rights reserved.`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure checkout for course enrollment">
+    <title>Checkout - YourCourse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .checkout-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .checkout-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-header {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .checkout-header h2 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        #card-element {
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            background: white;
+        }
+
+        #card-errors {
+            color: #ef4444;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            min-height: 20px;
+        }
+
+        .order-summary {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .order-item-info h4 {
+            font-size: 1rem;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+
+        .order-item-info p {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .order-item-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 2px solid #d1d5db;
+        }
+
+        .order-total span:first-child {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .order-total span:last-child {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #6366f1;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1rem;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .submit-button:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .submit-button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .money-back-banner {
+            background: #fef3c7;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+
+        @media (max-width: 968px) {
+            .checkout-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6366f1;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">YourCourse</a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="color: #6b7280; font-size: 0.9rem;">🔒 Secure Checkout</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="checkout-container">
+        <!-- Left Column - Payment Form -->
+        <div class="checkout-section">
+            <a href="index.html#pricing" class="back-link">← Back to Pricing</a>
+
+            <div class="checkout-header">
+                <h2>Complete Your Purchase</h2>
+                <p style="color: #6b7280;">Enter your details to enroll in the course</p>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+
+            <form id="payment-form">
+                <h3 style="margin-bottom: 1rem; color: #1f2937;">Contact Information</h3>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem; color: #1f2937;">Payment Information</h3>
+
+                <div class="form-group">
+                    <label for="card-element">Credit or Debit Card *</label>
+                    <div id="card-element"></div>
+                    <div id="card-errors"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="terms" required style="width: auto; margin-right: 0.5rem;">
+                        I agree to the <a href="terms.html" target="_blank" style="color: #6366f1;">Terms of Service</a> and <a href="privacy.html" target="_blank" style="color: #6366f1;">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button" id="submit-button">
+                    <span id="button-text">Complete Purchase</span>
+                    <div class="loading-spinner" id="spinner"></div>
+                </button>
+
+                <div class="security-badges">
+                    <div class="security-badge">
+                        <span>🔒</span>
+                        <span>Secure SSL Encryption</span>
+                    </div>
+                    <div class="security-badge">
+                        <span>💳</span>
+                        <span>Powered by Stripe</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Column - Order Summary -->
+        <div>
+            <div class="checkout-section">
+                <div class="checkout-header">
+                    <h2>Order Summary</h2>
+                </div>
+
+                <div class="money-back-banner">
+                    💰 30-Day Money-Back Guarantee
+                </div>
+
+                <div class="order-summary">
+                    <div class="order-item">
+                        <div class="order-item-info">
+                            <h4 id="plan-name">Pro Plan</h4>
+                            <p id="plan-description">Full course access with mentorship</p>
+                        </div>
+                        <div class="order-item-price" id="plan-price">$399</div>
+                    </div>
+                </div>
+
+                <div class="order-total">
+                    <span>Total</span>
+                    <span id="total-price">$399</span>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem; color: #1f2937;">What's Included:</h3>
+                <ul class="features-list" id="features-list">
+                    <li>Everything in Basic</li>
+                    <li>1-on-1 Mentorship (4 Sessions)</li>
+                    <li>Code Review</li>
+                    <li>Private Community Access</li>
+                    <li>Job Placement Support</li>
+                    <li>Lifetime Updates</li>
+                </ul>
+            </div>
+
+            <div class="checkout-section" style="margin-top: 1.5rem;">
+                <h3 style="margin-bottom: 1rem; color: #1f2937;">✓ What Happens Next</h3>
+                <ol style="padding-left: 1.5rem; color: #4b5563;">
+                    <li style="margin-bottom: 0.75rem;">Instant access to all course materials</li>
+                    <li style="margin-bottom: 0.75rem;">Welcome email with login credentials</li>
+                    <li style="margin-bottom: 0.75rem;">Join our private community</li>
+                    <li style="margin-bottom: 0.75rem;">Start learning immediately!</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

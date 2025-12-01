@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - YourCourse</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+    <style>
+        .success-container {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .success-card {
+            max-width: 600px;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 3rem;
+            animation: scaleIn 0.5s ease;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .success-card h1 {
+            font-size: 2rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .success-card p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .success-details {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .success-details h3 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .detail-value {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .next-steps {
+            background: #eff6ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .next-steps h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .next-steps ol {
+            padding-left: 1.5rem;
+            color: #1f2937;
+        }
+
+        .next-steps li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #6366f1;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #6366f1;
+            border: 2px solid #6366f1;
+        }
+
+        .btn-secondary:hover {
+            background: #f5f3ff;
+        }
+
+        @media (max-width: 768px) {
+            .success-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">YourCourse</a>
+        </div>
+    </nav>
+
+    <div class="success-container">
+        <div class="success-card">
+            <div class="success-icon">🎉</div>
+
+            <h1>Payment Successful!</h1>
+            <p>Congratulations! You're now enrolled in the course. Welcome to the community!</p>
+
+            <div class="success-details">
+                <h3>Order Details</h3>
+                <div class="detail-item">
+                    <span class="detail-label">Course</span>
+                    <span class="detail-value" id="course-name">Complete Professional Development Course</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Plan</span>
+                    <span class="detail-value" id="plan-name">Pro Plan</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Amount Paid</span>
+                    <span class="detail-value" id="amount-paid">$399</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Order ID</span>
+                    <span class="detail-value" id="order-id">ORD-123456789</span>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>📧 What's Next?</h3>
+                <ol>
+                    <li><strong>Check your email</strong> - We've sent you login credentials and a welcome message</li>
+                    <li><strong>Set up your profile</strong> - Complete your student profile to get started</li>
+                    <li><strong>Join the community</strong> - Connect with other students in our private Discord</li>
+                    <li><strong>Start learning</strong> - Access your first lesson immediately!</li>
+                </ol>
+            </div>
+
+            <div class="action-buttons">
+                <a href="course.html" class="btn btn-primary">Start Learning</a>
+                <a href="index.html" class="btn btn-secondary">Back to Home</a>
+            </div>
+
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: #9ca3af;">
+                Need help? Contact us at <a href="mailto:support@yourdomain.com" style="color: #6366f1;">support@yourdomain.com</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Get plan from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedPlan = urlParams.get('plan') || 'pro';
+        const sessionId = urlParams.get('session_id');
+
+        // Load plan details
+        const plan = CONFIG.pricing[selectedPlan];
+        if (plan) {
+            document.getElementById('plan-name').textContent = `${plan.name} Plan`;
+            document.getElementById('amount-paid').textContent = `${plan.currency}${plan.price}`;
+        }
+
+        // Generate order ID (in production, this comes from backend)
+        if (sessionId) {
+            document.getElementById('order-id').textContent = sessionId;
+        } else {
+            const orderId = 'ORD-' + Date.now();
+            document.getElementById('order-id').textContent = orderId;
+        }
+
+        // Send conversion event to analytics (if configured)
+        if (CONFIG.analytics.googleAnalytics && CONFIG.analytics.googleAnalytics !== 'G-XXXXXXXXXX') {
+            // Google Analytics conversion tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'purchase', {
+                    transaction_id: sessionId || 'ORD-' + Date.now(),
+                    value: plan.price,
+                    currency: 'USD',
+                    items: [{
+                        item_id: selectedPlan,
+                        item_name: `${plan.name} Plan`,
+                        price: plan.price,
+                        quantity: 1
+                    }]
+                });
+            }
+        }
+
+        if (CONFIG.analytics.facebookPixel && CONFIG.analytics.facebookPixel !== 'XXXXXXXXXX') {
+            // Facebook Pixel conversion tracking
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Purchase', {
+                    value: plan.price,
+                    currency: 'USD'
+                });
+            }
+        }
+
+        // In production, you might want to verify the payment on the backend
+        // before showing this page to prevent users from accessing it directly
+    </script>
+</body>
+</html>

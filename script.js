@@ -179,14 +179,15 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
-// Pricing card click handlers
-document.querySelectorAll('.pricing-card .cta-button').forEach((button, index) => {
+// Pricing card click handlers - Redirect to checkout
+document.querySelectorAll('.pricing-card .cta-button').forEach((button) => {
     button.addEventListener('click', (e) => {
         e.stopPropagation(); // Prevent triggering parent handlers
-        const planName = button.closest('.pricing-card').querySelector('.plan-name').textContent;
+        const planCard = button.closest('.pricing-card');
+        const planName = planCard.querySelector('.plan-name').textContent.toLowerCase();
 
-        // In a real application, this would redirect to a checkout page
-        alert(`🎉 Great choice! You selected the ${planName} plan.\n\nIn a production site, this would redirect to a secure checkout page.`);
+        // Redirect to checkout page with plan parameter
+        window.location.href = `checkout.html?plan=${planName}`;
     });
 });
 
@@ -267,3 +268,21 @@ console.log('%c🎓 Welcome to YourCourse!', 'font-size: 20px; color: #6366f1; f
 console.log('%cInterested in how this page was built?', 'font-size: 14px; color: #6b7280;');
 console.log('%cThis is a modern, responsive sales page built with vanilla HTML, CSS, and JavaScript.', 'font-size: 12px; color: #6b7280;');
 console.log('%cNo frameworks required! 🚀', 'font-size: 12px; color: #10b981; font-weight: bold;');
+
+// Populate dynamic content from config
+if (typeof CONFIG !== 'undefined') {
+    // Update copyright
+    const copyrightText = document.getElementById('copyright-text');
+    if (copyrightText) {
+        copyrightText.textContent = `© ${CONFIG.site.year} ${CONFIG.site.name}. All rights reserved.`;
+    }
+
+    // Update page title and meta
+    document.title = CONFIG.course.title + ' - ' + CONFIG.site.name;
+
+    // Update logo
+    const logos = document.querySelectorAll('.logo');
+    logos.forEach(logo => {
+        logo.textContent = CONFIG.site.name;
+    });
+}
